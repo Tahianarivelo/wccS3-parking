@@ -15,7 +15,7 @@ CREATE TABLE axe (
     nom VARCHAR(50) NOT NULL,
     longueur DECIMAL(10,2) NOT NULL,---par metre
     espace DECIMAL(10,2) NOT NULL,---espace entre les voitures
-    dureeMax TIME,
+    dureeMax INTEGER,
     coordX DECIMAL(10,2),
     coordY DECIMAL(10,2)
 );
@@ -43,7 +43,7 @@ CREATE TABLE nalanaAuto(
     idOccupation VARCHAR(20),
     date TIMESTAMP,
     etat INTEGER,
-    FOREIGN KEY (idOccupation) REFERENCES occupation(id),
+    FOREIGN KEY (idOccupation) REFERENCES occupation(id)
 );
 CREATE SEQUENCE seq_nalanaAuto;
 
