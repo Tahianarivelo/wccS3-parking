@@ -1,172 +1,43 @@
 <!DOCTYPE HTML>
 <!--
-	Theory by TEMPLATED
-	templated.co @templatedco
-	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+	Eventually by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
 	<head>
-		<title>Theory by TEMPLATED</title>
+		<title>Eventually by HTML5 UP</title>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="<?php echo base_url();?>assets/accueil/assets/css/main.css" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="<?php echo base_url();?>assets/index/assets/css/main.css" />
 	</head>
-	<body>
+	<body class="is-preload">
 
 		<!-- Header -->
 			<header id="header">
-				<div class="inner">
-					<a href="index.php" class="logo">Theory</a>
-					<nav id="nav">
-					<a href="welcome">Home</a>
-					<a href="reservation">Mes Places</a>
-					</nav>
-					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
-				</div>
+				<h1>Aiza kia no hijanonako</h1>
+				<p><br />
+				Ampidiro eto ny Halavan'ny fiaranao(metatra)</p>
 			</header>
 
-		<!-- Banner -->
-			<section id="banner">
-				<h1>Welcome to Theory</h1>
-				<p>A free responsive HTML5 website template by TEMPLATED.</p>
-			</section>
+		<!-- Signup Form -->
+			<form id="signup-form" method="post" action="welcome/recherche">
+				<input type="text" name="longueur" id="email" placeholder="Oh:23" />
+				<input type="submit" value="Mitady" />
+			</form>
 
-		<!-- One -->
-			<section id="one" class="wrapper">
-				<div class="inner">
-					<div class="flex flex-3">
-						<article>
-							<header>
-								<h3>Magna tempus sed amet<br /> aliquam veroeros</h3>
-							</header>
-							<p>Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu.</p>
-							<footer>
-								<input type="text" name="query" id="query" value="" placeholder="Matricule voiture">
-									</br>
-								<a href="#" class="button special">More</a>
-							</footer>
-						</article>
-						<article>
-							<header>
-								<h3>Interdum lorem pulvinar<br /> adipiscing vitae</h3>
-							</header>
-							<p>Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu.</p>
-							<footer>
-								<a href="#" class="button special">More</a>
-							</footer>
-						</article>
-						<article>
-							<header>
-								<h3>Libero purus magna sapien<br /> sed ullamcorper</h3>
-							</header>
-							<p>Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu.</p>
-							<footer>
-								<a href="#" class="button special">More</a>
-							</footer>
-						</article>
-					</div>
-				</div>
-			</section>
-
-		<!-- Two -->
-			<section id="two" class="wrapper style1 special">
-				<div class="inner">
-					<header>
-						<h2>Ipsum Feugiat</h2>
-						<p>Semper suscipit posuere apede</p>
-					</header>
-					<div class="flex flex-4">
-						<div class="box person">
-							<div class="image round">
-								<img src="<?php echo base_url();?>assets/accueil/images/pic03.jpg" alt="Person 1" />
-							</div>
-							<h3>Magna</h3>
-							<p>Cipdum dolor</p>
-						</div>
-						<div class="box person">
-							<div class="image round">
-								<img src="<?php echo base_url();?>assets/accueil/images/pic04.jpg" alt="Person 2" />
-							</div>
-							<h3>Ipsum</h3>
-							<p>Vestibulum comm</p>
-						</div>
-						<div class="box person">
-							<div class="image round">
-								<img src="<?php echo base_url();?>assets/accueil/images/pic05.jpg" alt="Person 3" />
-							</div>
-							<h3>Tempus</h3>
-							<p>Fusce pellentes</p>
-						</div>
-						<div class="box person">
-							<div class="image round">
-								<img src="<?php echo base_url();?>assets/accueil/images/pic06.jpg" alt="Person 4" />
-							</div>
-							<h3>Dolore</h3>
-							<p>Praesent placer</p>
-						</div>
-					</div>
-				</div>
-			</section>
-
-		<!-- Three -->
-			<section id="three" class="wrapper special">
-				<div class="inner">
-					<header class="align-center">
-						<h2>Nunc Dignissim</h2>
-						<p>Aliquam erat volutpat nam dui </p>
-					</header>
-					<div class="flex flex-2">
-						<article>
-							<div class="image fit">
-								<img src="<?php echo base_url();?>assets/accueil/images/pic01.jpg" alt="Pic 01" />
-							</div>
-							<header>
-								<h3>Praesent placerat magna</h3>
-							</header>
-							<p>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor lorem ipsum.</p>
-							<footer>
-								<a href="#" class="button special">More</a>
-							</footer>
-						</article>
-						<article>
-							<div class="image fit">
-								<img src="<?php echo base_url();?>assets/accueil/images/pic02.jpg" alt="Pic 02" />
-							</div>
-							<header>
-								<h3>Fusce pellentesque tempus</h3>
-							</header>
-							<p>Sed adipiscing ornare risus. Morbi est est, blandit sit amet, sagittis vel, euismod vel, velit. Pellentesque egestas sem. Suspendisse commodo ullamcorper magna non comodo sodales tempus.</p>
-							<footer>
-								<a href="#" class="button special">More</a>
-							</footer>
-						</article>
-					</div>
-				</div>
-			</section>
-
-		<!-- Footer -->
+		<!-- Footer
 			<footer id="footer">
-				<div class="inner">
-					<div class="flex">
-						<div class="copyright">
-							&copy; Untitled. Design: <a href="https://templated.co">TEMPLATED</a>. Images: <a href="https://unsplash.com">Unsplash</a>.
-						</div>
-						<ul class="icons">
-							<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-							<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="#" class="icon fa-linkedin"><span class="label">linkedIn</span></a></li>
-							<li><a href="#" class="icon fa-pinterest-p"><span class="label">Pinterest</span></a></li>
-							<li><a href="#" class="icon fa-vimeo"><span class="label">Vimeo</span></a></li>
-						</ul>
-					</div>
-				</div>
-			</footer>
+				<ul class="icons">
+					<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+					<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+					<li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
+				</ul>
+			</footer> -->
 
 		<!-- Scripts -->
-			<script src="<?php echo base_url();?>assets/accueil/assets/js/jquery.min.js"></script>
-			<script src="<?php echo base_url();?>assets/accueil/assets/js/skel.min.js"></script>
-			<script src="<?php echo base_url();?>assets/accueil/assets/js/util.js"></script>
-			<script src="<?php echo base_url();?>assets/accueil/assets/js/main.js"></script>
+			<script src="<?php echo base_url();?>assets/index/assets/js/main.js"></script>
 
 	</body>
 </html>

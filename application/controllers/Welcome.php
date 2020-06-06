@@ -21,15 +21,16 @@ class Welcome extends CI_Controller {
             $this->db->insert('token', $data);
 			set_cookie('token',$this->Util->getToken(),60*60*24,'','/','',false,true);//1 jour expitation
 		}
-		$this->load->view('index');
+	
+		$this->load->view('accueil');
 	}
 	public function recherche(){
-		$this->load->view('rechercheResult');
+		$data['view'] = 'rechercheResult';
+		$this->load->view('template',$data);
 	}
 	public function reservation(){
-		$this->load->view('reservation');
+		$data['view'] = 'reservation';
+		$this->load->view('template',$data);
 	}
-	public function elements(){
-		$this->load->view('elements');
-	}
+	
 }

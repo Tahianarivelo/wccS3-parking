@@ -21,15 +21,15 @@ class Reserver extends CI_Controller
             $nb = $row['nb'];
         }
         if ($nb >= 3) {
-            $error['error'] = " vous avez déjà fait 3 demande de parking";
-            $this->load->view('index', $error);
+            $data['error'] = " vous avez déjà fait 3 demande de parking";
+            $this->load->view('accueil',$data);
         } else {
             $id = "OCP".$this->Util->formatNumber($this->Util->getNextVal('seq_occupation'), 4);
             $idaxe = $this->input->post('idAxe');
             $longueur = $this->input->post('longueurVehicule');
             $matricule = $this->input->post('matricule');
             $date = new DateTime();
-            $data = array(
+            $dataInsert = array(
                 'id' => $id,
                 'idaxe' => $idaxe,
                 'valuetoken' => $token,
@@ -39,8 +39,18 @@ class Reserver extends CI_Controller
                 'etat' => 1
             );
 
-            $this->db->insert('occupation', $data);
-            $this->load->view('reservation');
+            $this->db->insert('occupation', $dataInsert);
+
+            $data['view'] = 'reservation';
+		    $this->load->view('template',$data);
         }
+    }
+    public function parckingTerminer(){
+        $id = $this->input->post('idOccupation');
+        $this->db->set('etat',10);
+        $this->db->where('id', $id);
+        $this->db->update('occupation'); // gives UPDATE occupation SET etat = 10 WHERE id = 2
+        $data['view'] = 'reservation';
+		$this->load->view('template',$data);
     }
 }
