@@ -5,5 +5,8 @@
         public function index() {
             $this->load->view('index');
         }
+        public function test() {
+            echo 'test';
+        }
     }
 ?>
