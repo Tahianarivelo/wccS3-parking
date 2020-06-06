@@ -9,7 +9,7 @@
 		<title>Elements - Theory by TEMPLATED</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="/wccs3-parking/assets/accueil/assets/css/main.css" />
+		<link rel="stylesheet" href="<?php echo base_url();?>assets/accueil/assets/css/main.css" />
 	</head>
 	<body class="subpage">
 
@@ -409,26 +409,26 @@
 								<h3>Image</h3>
 
 								<h4>Fit</h4>
-								<span class="image fit"><img src="images/pic01.jpg" alt="" /></span>
+								<span class="image fit"><img src="<?php echo base_url();?>assets/accueil/images/pic01.jpg" alt="" /></span>
 								<div class="box alt">
 									<div class="row 50% uniform">
-										<div class="4u"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
-										<div class="4u"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
-										<div class="4u$"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
+										<div class="4u"><span class="image fit"><img src="<?php echo base_url();?>assets/accueil/images/pic01.jpg" alt="" /></span></div>
+										<div class="4u"><span class="image fit"><img src="<?php echo base_url();?>assets/accueil/images/pic01.jpg" alt="" /></span></div>
+										<div class="4u$"><span class="image fit"><img src="<?php echo base_url();?>assets/accueil/images/pic01.jpg" alt="" /></span></div>
 										<!-- Break -->
-										<div class="4u"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
-										<div class="4u"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
-										<div class="4u$"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
+										<div class="4u"><span class="image fit"><img src="<?php echo base_url();?>assets/accueil/images/pic01.jpg" alt="" /></span></div>
+										<div class="4u"><span class="image fit"><img src="<?php echo base_url();?>assets/accueil/images/pic01.jpg" alt="" /></span></div>
+										<div class="4u$"><span class="image fit"><img src="<?php echo base_url();?>assets/accueil/images/pic01.jpg" alt="" /></span></div>
 										<!-- Break -->
-										<div class="4u"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
-										<div class="4u"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
-										<div class="4u$"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
+										<div class="4u"><span class="image fit"><img src="<?php echo base_url();?>assets/accueil/images/pic01.jpg" alt="" /></span></div>
+										<div class="4u"><span class="image fit"><img src="<?php echo base_url();?>assets/accueil/images/pic01.jpg" alt="" /></span></div>
+										<div class="4u$"><span class="image fit"><img src="<?php echo base_url();?>assets/accueil/images/pic01.jpg" alt="" /></span></div>
 									</div>
 								</div>
 
 								<h4>Left &amp; Right</h4>
-								<p><span class="image left"><img src="images/pic02.jpg" alt="" /></span>Lorem ipsum dolor sit accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Vestibulum ante ipsum primis in faucibus magna blandit adipiscing eu felis iaculis volutpat lorem ipsum dolor sit amet dolor consequat.</p>
-								<p><span class="image right"><img src="images/pic02.jpg" alt="" /></span>Lorem ipsum dolor sit accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Vestibulum ante ipsum primis in faucibus magna blandit adipiscing eu felis iaculis volutpat lorem ipsum dolor sit amet dolor consequat.</p>
+								<p><span class="image left"><img src="<?php echo base_url();?>assets/accueil/images/pic02.jpg" alt="" /></span>Lorem ipsum dolor sit accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Vestibulum ante ipsum primis in faucibus magna blandit adipiscing eu felis iaculis volutpat lorem ipsum dolor sit amet dolor consequat.</p>
+								<p><span class="image right"><img src="<?php echo base_url();?>assets/accueil/images/pic02.jpg" alt="" /></span>Lorem ipsum dolor sit accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Vestibulum ante ipsum primis in faucibus magna blandit adipiscing eu felis iaculis volutpat lorem ipsum dolor sit amet dolor consequat.</p>
 
 							<!-- Box -->
 								<h3>Box</h3>
@@ -474,10 +474,10 @@ print 'It took ' + i + ' iterations to sort the deck.';
 			</footer>
 
 		<!-- Scripts -->
-			<script src="/wccs3-parking/assets/accueil/assets/js/jquery.min.js"></script>
-			<script src="/wccs3-parking/assets/accueil/assets/js/skel.min.js"></script>
-			<script src="/wccs3-parking/assets/accueil/assets/js/util.js"></script>
-			<script src="/wccs3-parking/assets/accueil/assets/js/main.js"></script>
+			<script src="<?php echo base_url();?>assets/accueil/assets/js/jquery.min.js"></script>
+			<script src="<?php echo base_url();?>assets/accueil/assets/js/skel.min.js"></script>
+			<script src="<?php echo base_url();?>assets/accueil/assets/js/util.js"></script>
+			<script src="<?php echo base_url();?>assets/accueil/assets/js/main.js"></script>
 
 	</body>
 </html>

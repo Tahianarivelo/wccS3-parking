@@ -9,7 +9,7 @@
 		<title>Theory by TEMPLATED</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="/wccs3-parking/assets/accueil/assets/css/main.css" />
+		<link rel="stylesheet" href="<?php echo base_url();?>assets/accueil/assets/css/main.css" />
 	</head>
 	<body>
 
@@ -18,9 +18,8 @@
 				<div class="inner">
 					<a href="index.php" class="logo">Theory</a>
 					<nav id="nav">
-						<a href="accueil">Home</a>
-						<a href="generic">Generic</a>
-						<a href="elements">Elements</a>
+					<a href="welcome">Home</a>
+					<a href="reservation">Mes Places</a>
 					</nav>
 					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
 				</div>
@@ -42,6 +41,8 @@
 							</header>
 							<p>Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu.</p>
 							<footer>
+								<input type="text" name="query" id="query" value="" placeholder="Matricule voiture">
+									</br>
 								<a href="#" class="button special">More</a>
 							</footer>
 						</article>
@@ -77,28 +78,28 @@
 					<div class="flex flex-4">
 						<div class="box person">
 							<div class="image round">
-								<img src="/wccs3-parking/assets/accueil/images/pic03.jpg" alt="Person 1" />
+								<img src="<?php echo base_url();?>assets/accueil/images/pic03.jpg" alt="Person 1" />
 							</div>
 							<h3>Magna</h3>
 							<p>Cipdum dolor</p>
 						</div>
 						<div class="box person">
 							<div class="image round">
-								<img src="/wccs3-parking/assets/accueil/images/pic04.jpg" alt="Person 2" />
+								<img src="<?php echo base_url();?>assets/accueil/images/pic04.jpg" alt="Person 2" />
 							</div>
 							<h3>Ipsum</h3>
 							<p>Vestibulum comm</p>
 						</div>
 						<div class="box person">
 							<div class="image round">
-								<img src="/wccs3-parking/assets/accueil/images/pic05.jpg" alt="Person 3" />
+								<img src="<?php echo base_url();?>assets/accueil/images/pic05.jpg" alt="Person 3" />
 							</div>
 							<h3>Tempus</h3>
 							<p>Fusce pellentes</p>
 						</div>
 						<div class="box person">
 							<div class="image round">
-								<img src="/wccs3-parking/assets/accueil/images/pic06.jpg" alt="Person 4" />
+								<img src="<?php echo base_url();?>assets/accueil/images/pic06.jpg" alt="Person 4" />
 							</div>
 							<h3>Dolore</h3>
 							<p>Praesent placer</p>
@@ -117,7 +118,7 @@
 					<div class="flex flex-2">
 						<article>
 							<div class="image fit">
-								<img src="/wccs3-parking/assets/accueil/images/pic01.jpg" alt="Pic 01" />
+								<img src="<?php echo base_url();?>assets/accueil/images/pic01.jpg" alt="Pic 01" />
 							</div>
 							<header>
 								<h3>Praesent placerat magna</h3>
@@ -129,7 +130,7 @@
 						</article>
 						<article>
 							<div class="image fit">
-								<img src="/wccs3-parking/assets/accueil/images/pic02.jpg" alt="Pic 02" />
+								<img src="<?php echo base_url();?>assets/accueil/images/pic02.jpg" alt="Pic 02" />
 							</div>
 							<header>
 								<h3>Fusce pellentesque tempus</h3>
@@ -162,10 +163,10 @@
 			</footer>
 
 		<!-- Scripts -->
-			<script src="/wccs3-parking/assets/accueil/assets/js/jquery.min.js"></script>
-			<script src="/wccs3-parking/assets/accueil/assets/js/skel.min.js"></script>
-			<script src="/wccs3-parking/assets/accueil/assets/js/util.js"></script>
-			<script src="/wccs3-parking/assets/accueil/assets/js/main.js"></script>
+			<script src="<?php echo base_url();?>assets/accueil/assets/js/jquery.min.js"></script>
+			<script src="<?php echo base_url();?>assets/accueil/assets/js/skel.min.js"></script>
+			<script src="<?php echo base_url();?>assets/accueil/assets/js/util.js"></script>
+			<script src="<?php echo base_url();?>assets/accueil/assets/js/main.js"></script>
 
 	</body>
 </html>

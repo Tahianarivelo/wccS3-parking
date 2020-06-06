@@ -9,19 +9,19 @@
 		<title>Eventually by HTML5 UP</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="/wccs3-parking/assets/index/assets/css/main.css" />
+		<link rel="stylesheet" href="<?php echo base_url();?>assets/index/assets/css/main.css" />
 	</head>
 	<body class="is-preload">
 
 		<!-- Header -->
 			<header id="header">
 				<h1>Eventually</h1>
-				<p>A simple template for telling the world when you'll launch<br />
+				<p><br />
 				your next big thing. Brought to you by <a href="http://html5up.net">HTML5 UP</a>.</p>
 			</header>
 
 		<!-- Signup Form -->
-			<form id="signup-form" method="post" action="welcome/accueil">
+			<form id="signup-form" method="post" action="welcome/recherche">
 				<input type="email" name="email" id="email" placeholder="Email Address" />
 				<input type="submit" value="Sign Up" />
 			</form>
@@ -40,7 +40,7 @@
 			</footer>
 
 		<!-- Scripts -->
-			<script src="/wccs3-parking/assets/index/assets/js/main.js"></script>
+			<script src="<?php echo base_url();?>assets/index/assets/js/main.js"></script>
 
 	</body>
 </html>
