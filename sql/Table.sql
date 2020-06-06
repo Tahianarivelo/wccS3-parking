@@ -17,7 +17,7 @@ CREATE TABLE occupation (
     idAxe VARCHAR(10),
     longueur DECIMAL(10,2) NOT NULL,---par metre
     etat INTEGER,
-    FOREIGN KEY (isAxe) REFERENCES axe(id)
+    FOREIGN KEY (idAxe) REFERENCES axe(id)
 );
 
 ---creation view
