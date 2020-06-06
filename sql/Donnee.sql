@@ -1,7 +1,7 @@
 ---donnee axe
-INSERT INTO axe VALUES(nextval('seq_axe'),'A',25,0.5,'48:00:00',0,0);
-INSERT INTO axe VALUES(nextval('seq_axe'),'B',25,0.5,'',0,0);
-INSERT INTO axe VALUES(nextval('seq_axe'),'C',25,0.5,'',0,0);
+INSERT INTO axe VALUES(nextval('seq_axe'),'A',25,0.5,1,0,0);
+INSERT INTO axe VALUES(nextval('seq_axe'),'B',25,0.5,1,0,0);
+INSERT INTO axe VALUES(nextval('seq_axe'),'C',25,0.5,1,0,0);
 
 ---occupation
 ---| etat non occupe == 0
