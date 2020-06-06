@@ -24,7 +24,7 @@ class Reserver extends CI_Controller
             $error['error'] = " vous avez déjà fait 3 demande de parking";
             $this->load->view('index', $error);
         } else {
-            $id = $this->Util->formatNumber($this->Util->getNextVal('seq_occupation'), 4);
+            $id = "OCP".$this->Util->formatNumber($this->Util->getNextVal('seq_occupation'), 4);
             $idaxe = $this->input->post('idAxe');
             $longueur = $this->input->post('longueurVehicule');
             $matricule = $this->input->post('matricule');
