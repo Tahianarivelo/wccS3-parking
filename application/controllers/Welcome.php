@@ -21,8 +21,9 @@ class Welcome extends CI_Controller {
             $this->db->insert('token', $data);
 			set_cookie('token',$this->Util->getToken(),60*60*24,'','/','',false,true);//1 jour expitation
 		}
-	
-		$this->load->view('accueil');
+		$data['estimation']=Axe::estimationReste($this->db);
+		if($this->input->get('error'))$data['error']=$this->input->get('error');
+		$this->load->view('accueil',$data);
 	}
 	public function recherche() {
 		$data = null;
@@ -36,14 +37,10 @@ class Welcome extends CI_Controller {
 				'suggestAxis' => $freeAxis[0],
 				'view' => 'rechercheResult'
 			);
+			$this->load->view($loadView, $data);
 		} catch(Exception $e) {
 			$error = $e->getMessage();
-			
-				$data['error'] = $error;
-				$loadView = 'accueil';
-			
-		} finally {
-			$this->load->view($loadView, $data);
+			redirect(base_url().'?error='.$error, 'location',301);
 		}
 	}
 	public function reservation() {

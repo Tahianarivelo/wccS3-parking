@@ -18,7 +18,7 @@
 					<p style="margin: 0px;">Duree maximum de stationement: <?php echo $value[$i]->dureemax; ?> h</p>
 					<footer>
 						<form action="<?php echo base_url(); ?>reserver/parckingTerminer" method="post">
-							<input type="hidden" name="idOccupation" value="OCP0013">
+							<input type="hidden" name="idOccupation" value="<?php echo $value[$i]->id; ?>">
 							</br>
 							<input type="submit" class="button icon fa-times" value="Miala" style="background-color:#e84d4d;">
 						</form>

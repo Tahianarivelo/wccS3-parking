@@ -11,7 +11,7 @@ class Reserver extends CI_Controller
     }
     public function index()
     {
-
+        $this->load->helper('url');
         $token = get_cookie("token");
         //verification si a deja fait 3 reservation valide
         $requette = "select count(*) as nb from occupation where valueToken='" . $token . "' and etat=1";
@@ -21,8 +21,8 @@ class Reserver extends CI_Controller
             $nb = $row['nb'];
         }
         if ($nb >= 3) {
-            $data['error'] = " Efa nanao fangatahana mihoatra ny telo (3) ianao ka tsy mety intsony raha tsy miala eo amin'ny toerana ny iray";
-            $this->load->view('accueil',$data);
+            $error = " Efa nanao fangatahana mihoatra ny telo (3) ianao ka tsy mety intsony raha tsy miala eo amin'ny toerana ny iray";
+            redirect(base_url().'?error='.$error, 'location',301);
         } else {
             $id = "OCP".$this->Util->formatNumber($this->Util->getNextVal('seq_occupation'), 4);
             $idaxe = $this->input->post('idAxe');
@@ -50,8 +50,7 @@ class Reserver extends CI_Controller
 
             $this->db->insert('occupation', $dataInsert);
 
-            $data['view'] = 'reservation';
-		    $this->load->view('template',$data);
+            redirect(base_url().'welcome/reservation', 'location',301);
         }
     }
     public function parckingTerminer(){
@@ -59,7 +58,7 @@ class Reserver extends CI_Controller
         $this->db->set('etat',10);
         $this->db->where('id', $id);
         $this->db->update('occupation'); // gives UPDATE occupation SET etat = 10 WHERE id = 2
-        $data['view'] = 'reservation';
-		$this->load->view('template',$data);
+    
+        redirect(base_url(), 'location',301);
     }
 }

@@ -37,11 +37,20 @@ class Axe extends CI_Model{
     }
     public function getFreelength($db) { // longueur occupe
         $takenlLength = $this->getTakenLength($db);
-        $result = $this->longueur - ($takenlLength + $this->espace);
+        $result = $this->longueur - ($takenlLength);
         return $result;
     }
-    public function estimationReste($db){
-
+    public static function estimationReste($db){
+        $allAxis = Axe::getAllAxis($db);
+        $result = array();
+        foreach($allAxis as $axis) {
+            $temp=array(
+                'axe'=>$axis->nom,
+                'reste'=>round($axis->getFreelength($db)/(3.5+$axis->espace))
+            );
+            $result[]=$temp;
+        }
+        return $result;
     }
     public static function getFreeAxis($carLength, $db) {
         $carLength = floatval($carLength);
