@@ -30,8 +30,9 @@ class Welcome extends CI_Controller {
 			$carLength = $this->input->post('longueur');
 			$freeAxis = Axe::getFreeAxis($carLength, $this->db);
 			$data = array(
+				'carLength' => $carLength,
 				'freeAxis' => $freeAxis,
-				'freeAxis' => $freeAxis[0],
+				'suggestAxis' => $freeAxis[0],
 				'view' => 'rechercheResult'
 			);
 			$this->load->view('template',$data);
