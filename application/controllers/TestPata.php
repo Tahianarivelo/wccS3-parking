@@ -13,10 +13,9 @@ class TestPata extends CI_Controller {
     public function index() {
         echo 'test Pata </br>';
         echo 'database </br>';
-        echo get_class($this->db);
         $result = Axe::getFreeAxis(4, $this->db);
         foreach($result as $row) {
-            echo $row->nom.'</br>';
+            echo $row->dureemax.'</br>';
         }
         $a = $result[0]->getFreelength($this->db);
         echo $a.'</br>';
