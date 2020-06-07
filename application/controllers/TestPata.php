@@ -19,8 +19,9 @@ class TestPata extends CI_Controller {
         }
         $a = $result[0]->getFreelength($this->db);
         echo $a.'</br>';
-        $freeAxis = Axe::getFreeAxis(3.6, $this->db);
-        //echo $freeAxis.'</br>';
+        $freeAxis = Axe::getFreeAxis('', $this->db);
+        $str = '28.43';
+        echo floatval($str);
     }
     public function Axe() {
 
