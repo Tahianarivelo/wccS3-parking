@@ -8,8 +8,8 @@ class Welcome extends CI_Controller {
 	   $this->load->helper('url'); 
 	   $this->load->database();
 	   $this->load->model('Util');
-	   $this->load->helper('cookie');   
-	   
+	   $this->load->helper('cookie'); 
+	   $this->load->model('Axe');
 	}
 	public function index()
 	{
@@ -24,11 +24,27 @@ class Welcome extends CI_Controller {
 	
 		$this->load->view('accueil');
 	}
-	public function recherche(){
-		$data['view'] = 'rechercheResult';
-		$this->load->view('template',$data);
+	public function recherche() {
+		$data = null;
+		try {
+			$carLength = $this->input->post('longueur');
+			$freeAxis = Axe::getFreeAxis($carLength, $this->db);
+			$data = array(
+				'freeAxis' => $freeAxis,
+				'freeAxis' => $freeAxis[0],
+				'view' => 'rechercheResult'
+			);
+			$this->load->view('template',$data);
+		} catch(Exception $e) {
+			$data = array(
+				'error' => $e->getMessage(),
+				'view' => 'rechercheResult',
+			);
+		} finally {
+			$this->load->view('template', $data);
+		}
 	}
-	public function reservation(){
+	public function reservation() {
 		$data['view'] = 'reservation';
 		$this->load->view('template',$data);
 	}
