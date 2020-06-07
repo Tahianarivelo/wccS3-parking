@@ -15,13 +15,13 @@ class Axe extends CI_Model{
     }
 
     public static function getAllAxis($db) {
-        $query = $db->query('select * from axe;');
+        $query = $db->query('select * from axe');
         $rows = $query->custom_result_object('Axe');
         return $rows;
     }
 
     public function getTakenOccupation($db) { // place occupe
-        $request = "select * from occupation where idAxe='%s' and etat=%d;";
+        $request = "select * from occupation where idAxe='%s' and etat=%d";
         $request = sprintf($request, $this->id, 1);
         $query = $db->query($request);
         $rows = $query->custom_result_object('Occupation');

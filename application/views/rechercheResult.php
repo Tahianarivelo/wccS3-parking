@@ -17,7 +17,7 @@
 						<h3> <?= $suggestAxis->nom ?> <i class="icon fa-star"></i></h3>
 					</header>
 					<p> <b> Espace entre voiture: </b> <?= $suggestAxis->espace ?> metes </p>
-					<p> <b> Duree maximum de stationemtn: </b> <?= $suggestAxis->dureeMax ?> heures </p>
+					<p> <b> Duree maximum de stationement: </b> <?= $suggestAxis->dureeMax ?> heures </p>
 					<footer>
 						<form action="<?php echo base_url(); ?>reserver" method="post">
 							<input type="hidden" name="idAxe" value="<?= $suggestAxis->id ?>">
@@ -37,17 +37,17 @@
 			<header class="align-center">
 				<h2>Toerana Malalaka</h2>
 			</header>
-			<div class="flex flex-2">
+			<div class="flex flex-<?php echo count($freeAxis);?>">
 				<?php foreach($freeAxis as $freeAxisRow) { ?>
 					<article>
 						<div class="image fit">
 							<img src="<?php echo base_url(); ?>assets/accueil/images/pic01.jpg" alt="Pic 01" />
 						</div>
 						<header>
-							<h3> <?= $freeAxisRow->nom ?> <i class="icon fa-star"></i></h3>
+							<h3> <?= $freeAxisRow->nom ?></h3>
 						</header>
 						<p> <b> Espace entre voiture: </b> <?= $freeAxisRow->espace ?> metes </p>
-						<p> <b> Duree maximum de stationemtn: </b> <?= $freeAxisRow->dureeMax ?> heures </p>
+						<p> <b> Duree maximum de stationement: </b> <?= $freeAxisRow->dureeMax ?> heures </p>
 						<footer>
 						<form action="<?php echo base_url(); ?>reserver" method="post">
 							<input type="hidden" name="idAxe" value="<?= $freeAxisRow->id ?>">

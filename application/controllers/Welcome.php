@@ -35,7 +35,7 @@ class Welcome extends CI_Controller {
 				'suggestAxis' => $freeAxis[0],
 				'view' => 'rechercheResult'
 			);
-			$this->load->view('template',$data);
+			//$this->load->view('template',$data);
 		} catch(Exception $e) {
 			$data = array(
 				'error' => $e->getMessage(),
