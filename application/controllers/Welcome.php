@@ -26,6 +26,7 @@ class Welcome extends CI_Controller {
 	}
 	public function recherche() {
 		$data = null;
+		$loadView = 'template';
 		try {
 			$carLength = $this->input->post('longueur');
 			$freeAxis = Axe::getFreeAxis($carLength, $this->db);
@@ -36,12 +37,18 @@ class Welcome extends CI_Controller {
 				'view' => 'rechercheResult'
 			);
 		} catch(Exception $e) {
-			$data = array(
-				'error' => $e->getMessage(),
-				'view' => 'rechercheResult',
-			);
+			$error = $e->getMessage();
+			if($error == 'tsy mety ilay alavana nampidirina, ka iangaviana amerina ampiditra izany') {
+				$data['error'] = $error;
+				$loadView = 'accueil';
+			} else {
+				$data = array(
+					'error' => $e->getMessage(),
+					'view' => 'rechercheResult',
+				);
+			}
 		} finally {
-			$this->load->view('template', $data);
+			$this->load->view($loadView, $data);
 		}
 	}
 	public function reservation() {

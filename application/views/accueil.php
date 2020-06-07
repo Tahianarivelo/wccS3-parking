@@ -21,10 +21,13 @@
 			</header>
 
 		<!-- Signup Form -->
-			<form id="signup-form" method="post" action="welcome/recherche">
-				<input type="text" name="longueur" id="email" placeholder="Oh:23" />
+			<form id="signup-form" method="post" action="<?= base_url(); ?>welcome/recherche">
+				<input type="text" name="longueur" id="email" placeholder="Oh:23" required />
 				<input type="submit" value="Mitady" />
 			</form>
+				<?php if(isset($error)) { ?>
+					<p> <?= $error ?> </p>
+				<?php } ?>
 
 		<!-- Footer
 			<footer id="footer">

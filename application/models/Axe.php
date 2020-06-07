@@ -42,6 +42,10 @@ class Axe extends CI_Model{
     }
 
     public static function getFreeAxis($carLength, $db) {
+        $carLength = floatval($carLength);
+        if($carLength < 2 || $carLength > 15) {
+            throw new Exception("tsy mety ilay alavana nampidirina, ka iangaviana amerina ampiditra izany");
+        }
         $allAxis = Axe::getAllAxis($db);
         $result = array();
         foreach($allAxis as $axis) {
@@ -50,7 +54,7 @@ class Axe extends CI_Model{
             }
         }
         if( empty($result) ) {
-            throw new Exception("le parking est remplit et ne peut pas vous garer");
+            throw new Exception("feno ilay parking, ka tsy afaka mandray anao");
         }
         return $result;
     }
