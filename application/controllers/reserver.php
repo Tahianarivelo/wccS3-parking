@@ -21,20 +21,29 @@ class Reserver extends CI_Controller
             $nb = $row['nb'];
         }
         if ($nb >= 3) {
-            $data['error'] = " vous avez déjà fait 3 demande de parking";
+            $data['error'] = " Efa nanao fangatahana mihoatra ny telo (3) ianao ka tsy mety intsony raha tsy miala eo amin'ny toerana ny iray";
             $this->load->view('accueil',$data);
         } else {
             $id = "OCP".$this->Util->formatNumber($this->Util->getNextVal('seq_occupation'), 4);
             $idaxe = $this->input->post('idAxe');
             $longueur = $this->input->post('longueurVehicule');
             $matricule = $this->input->post('matricule');
+            // $reg="/^([0-9]{4})\s?([A-Za-z]{2,3})$/i";
+            // if(!preg_match($reg,$matricule)){
+            //     $data['errorMatr'] = "Matricule non valide";
+            //     $data['view'] = 'rechercheResult';
+		    //     $this->load->view('template',$data);
+            // }
+            $replaced = preg_replace("/\s+/", "", $matricule);
+            $up=strtoupper($replaced);
+            $matriculeFinal=substr($up, 0, 4).' '.substr($up, 4, 3);
             $date = new DateTime();
             $dataInsert = array(
                 'id' => $id,
                 'idaxe' => $idaxe,
                 'valuetoken' => $token,
                 'longueur' => $longueur,
-                'numvoiture' => $matricule,
+                'numvoiture' => $matriculeFinal,
                 'date' => $date->format("Y/m/d H:i:s"),
                 'etat' => 1
             );

@@ -38,15 +38,10 @@ class Welcome extends CI_Controller {
 			);
 		} catch(Exception $e) {
 			$error = $e->getMessage();
-			if($error == 'tsy mety ilay alavana nampidirina, ka iangaviana amerina ampiditra izany') {
+			
 				$data['error'] = $error;
 				$loadView = 'accueil';
-			} else {
-				$data = array(
-					'error' => $e->getMessage(),
-					'view' => 'rechercheResult',
-				);
-			}
+			
 		} finally {
 			$this->load->view($loadView, $data);
 		}
