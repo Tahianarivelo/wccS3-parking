@@ -10,7 +10,21 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="<?php echo base_url();?>assets/index/assets/css/main.css" />
+		<script src="<?php echo base_url();?>assets/index/assets/js/chart.js"></script>
 	</head>
+	<style>
+		.chart-container{
+			height:400px; 
+			width:500px;
+			margin-bottom: 10px;
+		}
+		@media screen and (max-width:540px){
+			.chart-container{
+				height:300px; 
+				width:300px;
+			}
+		}
+	</style>
 	<body class="is-preload">
 
 		<!-- Header -->
@@ -23,8 +37,14 @@
 				<p><?php echo $estimation[0]['axe']; ?>: <?php echo $estimation[0]['reste']; ?> fiara eo ho eo sisa,
 				<?php echo $estimation[1]['axe']; ?>: <?php echo $estimation[1]['reste']; ?> fiara eo ho eo sisa,
 				<?php echo $estimation[2]['axe']; ?>: <?php echo $estimation[2]['reste']; ?> fiara eo ho eo sisa</p>
+				<div class="chart-container" >
+					<canvas id="chart"></canvas>
+				</div>
+				<p style="display:none;" id="<?php echo $estimation[0]['axe']; ?>"><?php echo $estimation[0]['reste']; ?></p>
+				<p style="display:none;" id="<?php echo $estimation[1]['axe']; ?>"><?php echo $estimation[1]['reste']; ?></p>
+				<p style="display:none;" id="<?php echo $estimation[2]['axe']; ?>"><?php echo $estimation[2]['reste']; ?></p>
 			</header>
-
+			
 		<!-- Signup Form -->
 			<form id="signup-form" method="post" action="<?= base_url(); ?>welcome/recherche">
 				<input type="text" name="longueur" id="email" placeholder="Oh:23" required />
@@ -46,6 +66,44 @@
 
 		<!-- Scripts -->
 			<script src="<?php echo base_url();?>assets/index/assets/js/main.js"></script>
-
+			
+			<script>
+var ctx = document.getElementById('chart');
+var a = document.getElementById('A');
+var b = document.getElementById('B');
+var c = document.getElementById('C');
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ['A', 'B', 'C'],
+        datasets: [{
+            label: 'Ireo toerana',
+            data: [parseInt(a.textContent),parseInt(b.textContent), parseInt(c.textContent)],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                },display:false
+            }]
+		},
+		responsive:true,
+    	maintainAspectRatio:false
+    }
+});
+</script>
 	</body>
 </html>
