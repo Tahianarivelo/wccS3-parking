@@ -20,9 +20,9 @@
 				<p style="margin-bottom: 0px;">
 				Ampidiro eto ny Halavan'ny fiaranao(metatra)</p>
 				
-				<p><?php echo $estimation[0]['axe']; ?>: <?php echo $estimation[0]['reste']; ?> fiara eo ho eo,
-				<?php echo $estimation[1]['axe']; ?>: <?php echo $estimation[1]['reste']; ?> fiara eo ho eo,
-				<?php echo $estimation[2]['axe']; ?>: <?php echo $estimation[2]['reste']; ?> fiara eo ho eo</p>
+				<p><?php echo $estimation[0]['axe']; ?>: <?php echo $estimation[0]['reste']; ?> fiara eo ho eo sisa,
+				<?php echo $estimation[1]['axe']; ?>: <?php echo $estimation[1]['reste']; ?> fiara eo ho eo sisa,
+				<?php echo $estimation[2]['axe']; ?>: <?php echo $estimation[2]['reste']; ?> fiara eo ho eo sisa</p>
 			</header>
 
 		<!-- Signup Form -->
