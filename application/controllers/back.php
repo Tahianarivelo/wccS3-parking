@@ -14,8 +14,6 @@ class Back extends CI_Controller
    {
       if (isset($_SESSION['user'])) {
          //redirect to back accueil
-         $data['view'] = "dashboard";
-         $this->load->view('back/template_back', $data);
       } else {
          $data['page'] = "login";
          $this->load->view('back/auth', $data);
