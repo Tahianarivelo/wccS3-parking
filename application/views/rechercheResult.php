@@ -17,7 +17,7 @@
 						<h3> <?= $suggestAxis->nom ?> <i class="icon fa-star"></i></h3>
 					</header>
 					<p> <b> Espace entre voiture: </b> <?= $suggestAxis->espace ?> metes </p>
-					<p> <b> Duree maximum de stationemtn: </b> <?= $suggestAxis->dureeMax ?> heures </p>
+					<p> <b> Duree maximum de stationemtn: </b> <?= $suggestAxis->dureemax ?> heures </p>
 					<footer>
 						<form action="<?php echo base_url(); ?>reserver" method="post">
 							<input type="hidden" name="idAxe" value="<?= $suggestAxis->id ?>">
@@ -47,7 +47,7 @@
 							<h3> <?= $freeAxisRow->nom ?> <i class="icon fa-star"></i></h3>
 						</header>
 						<p> <b> Espace entre voiture: </b> <?= $freeAxisRow->espace ?> metes </p>
-						<p> <b> Duree maximum de stationemtn: </b> <?= $freeAxisRow->dureeMax ?> heures </p>
+						<p> <b> Duree maximum de stationemtn: </b> <?= $freeAxisRow->dureemax ?> heures </p>
 						<footer>
 						<form action="<?php echo base_url(); ?>reserver" method="post">
 							<input type="hidden" name="idAxe" value="<?= $freeAxisRow->id ?>">

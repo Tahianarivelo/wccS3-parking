@@ -5,9 +5,9 @@ class Axe extends CI_Model{
     public $nom;
     public $longueur;
     public $espace;
-    public $dureeMax;
-    public $coordX;
-    public $coordY;
+    public $dureemax;
+    public $coordx;
+    public $coordy;
 
     public function __construct(){
         parent::__construct();
