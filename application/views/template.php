@@ -16,6 +16,18 @@
 	h2,h3{
 		color:#16363e;
 	}
+    .cmyProgress {
+        width: 100%;
+        background-color: #ddd;
+    }
+    .cmyBar {
+        width: 1%;
+        height: 30px;
+        background-color: #4CAF50;
+        text-align: center;
+        line-height: 30px;
+        color: white;
+    }
 </style>
 <body class="subpage">
 

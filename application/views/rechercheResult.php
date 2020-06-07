@@ -11,7 +11,9 @@
 			<div class="flex flex-2">
 				<article>
 					<div class="image fit">
-						<img src="<?php echo base_url(); ?>assets/accueil/images/pic01.jpg" alt="Pic 01" />
+						<div class="cmyProgress" id="myProgress">
+							<div class="cmyBar" id="myBar">1%</div>
+						</div>
 					</div>
 					<header>
 						<h3> <?= $suggestAxis->nom ?> <i class="icon fa-star"></i></h3>
@@ -40,10 +42,12 @@
 				<h2>Toerana Malalaka</h2>
 			</header>
 			<div class="flex flex-<?php echo count($freeAxis);?>">
-				<?php foreach($freeAxis as $freeAxisRow) { ?>
+				<?php $i = 0; foreach($freeAxis as $freeAxisRow) { ?>
 					<article>
 						<div class="image fit">
-							<img src="<?php echo base_url(); ?>assets/accueil/images/pic01.jpg" alt="Pic 01" />
+							<div class="cmyProgress" id="myProgress<?= $i ?>">
+								<div class="cmyBar" id="myBar<?= $i ?>">1%</div>
+							</div>
 						</div>
 						<header>
 							<h3> <?= $freeAxisRow->nom ?></h3>
@@ -64,7 +68,7 @@
 							</form>
 						</footer>
 					</article>
-				<?php } ?>
+				<?php $i++;} ?>
 			</div>
 		</div>
 	</section>
@@ -106,5 +110,18 @@
                 }
 		});
     }
+
+	var arr = '<?= json_encode($freeAxis) ?>';
+	arr = JSON.parse(arr);
+	
+	var suggestElem = document.getElementById("myBar");
+	suggestElem.style.width = arr[0].tauxOccupation + "%";
+	suggestElem.innerHTML = arr[0].tauxOccupation  + "%";
+
+	for(var i = 0; i < <?= count($freeAxis) ?>; i++) {
+		var elem = document.getElementById("myBar" + i);
+		elem.style.width = arr[i].tauxOccupation + "%";
+		elem.innerHTML = arr[i].tauxOccupation  + "%";
+	}
 </script>
 	
