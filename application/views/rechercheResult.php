@@ -31,6 +31,7 @@
 			</div>
 		</div>
 	</section>
+	<?php if(count($freeAxis) > 1) { ?>
 	<section id="three" class="wrapper special">
 		<div class="inner">
 			<header class="align-center">
@@ -61,5 +62,6 @@
 			</div>
 		</div>
 	</section>
+	<?php } ?>
 <?php } ?>
 	
