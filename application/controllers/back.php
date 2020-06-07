@@ -14,8 +14,6 @@ class Back extends CI_Controller
    {
       if (isset($_SESSION['user'])) {
          //redirect to back accueil
-         $data = array('view' => 'dashboard');
-         $this->load->view('back/template_back',$data);
       } else {
          $data['page'] = "login";
          $this->load->view('back/auth', $data);
@@ -50,11 +48,12 @@ class Back extends CI_Controller
             if(password_verify($mdp,$pers->mdp)){
                $_SESSION['user']=$pers->id;
                //redirect to back accueil
+               $data['view'] = "dashboard";
+               $this->load->view('back/template_back', $data);
             }else{
                throw new Exception("Mot de passa diso");
             }
          }
-
       } catch (Exception $ex) {
 
          $data['error'] = $ex->getMessage();
@@ -111,5 +110,13 @@ class Back extends CI_Controller
          $data['page'] = "inscription";
          $this->load->view('back/auth', $data);
       }
+   }
+   public function Home(){
+      $data['view'] = 'dashboard';
+      $this->load->view('back/template_back',$data);
+   }
+   public function LanyDaty(){
+      $data['view'] = 'lanydaty';
+      $this->load->view('back/template_back',$data);
    }
 }
