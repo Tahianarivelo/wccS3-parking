@@ -77,7 +77,7 @@ var myChart = new Chart(ctx, {
     data: {
         labels: ['A', 'B', 'C'],
         datasets: [{
-            label: 'Ireo toerana',
+            label: 'Fiara sisa Antonona',
             data: [parseInt(a.textContent),parseInt(b.textContent), parseInt(c.textContent)],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
