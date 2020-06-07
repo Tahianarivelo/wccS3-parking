@@ -53,7 +53,7 @@
 						<footer>
 					
 
-						<form action="<?php echo base_url(); ?>reserver" method="post">
+						<form action="<?php echo base_url(); ?>Reserver" method="post">
 							<input type="text" name="errorMatr" style="color:red;border:none;background-color:white;" disabled value="">
 							<!-- <h4 name="errorMatr" style="color:red;"></h4> -->
 							<input type="hidden" name="idAxe" value="<?= $freeAxisRow->id ?>">

@@ -24,7 +24,8 @@
 		<div class="inner">
 			<a href="<?php echo base_url(); ?>GetReservation/back" class="logo">Back</a>
 			<nav id="nav">
-				<a href="<?php echo base_url(); ?>GetReservation/lanyDaty">Lany daty</a>
+				<a href="<?php echo base_url(); ?>Back/Home">Home</a>
+				<a href="<?php echo base_url(); ?>Back/LanyDaty">Lany daty</a>
 			</nav>
 			<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
 		</div>

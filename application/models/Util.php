@@ -41,4 +41,11 @@ class Util extends CI_Model
         $token = sha1($token);
         return $token;
     }
+    public function getDiffenHeure($date/*en string*/){//date en string no atsofoka
+        $dateNow = new DateTime();
+        $date1 = strtotime($dateNow->format("Y-m-d H:i:s"));
+        $date2 = strtotime($date);
+        $diff = $date1 - $date2;
+        return $diff/3600;
+    }
 }
