@@ -46,6 +46,6 @@ class Util extends CI_Model
         $date1 = strtotime($dateNow->format("Y-m-d H:i:s"));
         $date2 = strtotime($date);
         $diff = $date1 - $date2;
-        return $diff/3600;
+        return round($diff/3600);
     }
 }

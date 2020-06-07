@@ -24,8 +24,11 @@ class OccupationDetail extends CI_Model{
         return $rows;
     }
 
-    public function manalaLanyDaty($db){
-        
+    public function makaLanyDaty($db){
+        $sql = "select * from occupationdetail  where etat='1'";
+        $query = $db->query($sql);
+        $rows = $query->custom_result_object('OccupationDetail');
+        return $rows;
     }
 }
 
