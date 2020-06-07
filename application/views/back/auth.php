@@ -24,7 +24,7 @@
                     <?php if(isset($error)){ ?> 
                         <h4 style="color:red;"><?php echo $error; ?></h4>
                     <?php } ?>
-                    <form method="POST" action="<?php echo base_url(); ?>back/login" id="signup-form" class="signup-form">
+                    <form method="POST" action="<?php echo base_url(); ?>Back/login" id="signup-form" class="signup-form">
                         <h2 class="form-title">Laoginina</h2>
                         <div class="form-group">
                             <input type="text" class="form-input" name="nom" id="name" placeholder="Your Name"/>
