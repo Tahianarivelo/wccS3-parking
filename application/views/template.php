@@ -24,8 +24,8 @@
 		<div class="inner">
 			<a href="<?php echo base_url(); ?>" class="logo">Miarahaba</a>
 			<nav id="nav">
-				<a href="<?php echo base_url(); ?>">Home</a>
-				<a href="<?php echo base_url(); ?>welcome/reservation">Mes Places</a>
+				<a href="<?php echo base_url(); ?>">Haka Toerana</a>
+				<a href="<?php echo base_url(); ?>welcome/reservation">Ireo Toerako</a>
 			</nav>
 			<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
 		</div>

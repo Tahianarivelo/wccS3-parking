@@ -26,6 +26,7 @@
 			<nav id="nav">
 				<a href="<?php echo base_url(); ?>Back/Home">Home</a>
 				<a href="<?php echo base_url(); ?>Back/LanyDaty">Lany daty</a>
+				<a href="<?php echo base_url(); ?>Back/logOut">Hiala</a>
 			</nav>
 			<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
 		</div>

@@ -44,12 +44,15 @@
 				<p style="display:none;" id="<?php echo $estimation[1]['axe']; ?>"><?php echo $estimation[1]['reste']; ?></p>
 				<p style="display:none;" id="<?php echo $estimation[2]['axe']; ?>"><?php echo $estimation[2]['reste']; ?></p>
 			</header>
-			
+			<form id="signup-form" style="margin-bottom:5px;" method="get" action="<?php echo base_url(); ?>welcome/reservation">
+				<input type="submit" value="Ireo Toerako" />
+			</form>
 		<!-- Signup Form -->
 			<form id="signup-form" method="post" action="<?= base_url(); ?>welcome/recherche">
 				<input type="text" name="longueur" id="email" placeholder="Oh:23" required />
 				<input type="submit" value="Mitady" />
 			</form>
+			
 				<?php if(isset($error)) { ?>
 					<p style="color:#d21818;"> <?= $error ?> </p>
 				<?php } ?>
