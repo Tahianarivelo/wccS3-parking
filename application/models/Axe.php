@@ -8,6 +8,7 @@ class Axe extends CI_Model{
     public $dureemax;
     public $coordx;
     public $coordy;
+    public $tauxOccupation;
 
     public function __construct(){
         parent::__construct();
@@ -33,6 +34,7 @@ class Axe extends CI_Model{
         foreach($occupation as $row) {
             $result += $row->longueur + $this->espace;
         }
+        $this->tauxOccupation = ($result * 100) / $this->longueur;
         return $result;
     }
     public function getFreelength($db) { // longueur occupe
