@@ -14,6 +14,8 @@ class Back extends CI_Controller
    {
       if (isset($_SESSION['user'])) {
          //redirect to back accueil
+         $data['view'] = "dashboard";
+         $this->load->view('back/template_back',$data);
       } else {
          $data['page'] = "login";
          $this->load->view('back/auth', $data);
@@ -116,7 +118,56 @@ class Back extends CI_Controller
       $this->load->view('back/template_back',$data);
    }
    public function LanyDaty(){
-      $data['view'] = 'lanydaty';
-      $this->load->view('back/template_back',$data);
+      $res = array(
+			'status' => 'error',
+			'message' => '',
+			'value' => null,
+			'view' => 'lanydaty');
+		if(isset($_COOKIE['token'])){
+			//load
+			$this->load->model('OccupationDetail');
+         $this->load->database();
+         $this->load->model('Util');
+
+         $lesReser = array();
+         $resFinal = array();
+			try{
+				$lesReser = $this->OccupationDetail->makaLanyDaty($this->db);
+            $res['status'] = 'OK';
+            //triage pardifference d'heure si ils depace le duree max de l'axe 
+            foreach($lesReser as $resOne){
+               if($this->Util->getDiffenHeure($resOne->date) > $resOne->dureemax){
+                  $resFinal[] = $resOne;
+               }
+            }
+            //si il est vide
+				if(empty($resFinal)){
+					$res['message'] = "Pas encore de reservation expirée.";
+				}
+				else{
+					$res['message'] = 'Les reservations expirées.';
+            }
+            $res['value'] = $resFinal;
+				$this->load->view('back/template_back',$res);
+			}
+			catch(Exception $e){
+				$res['message'] = $e->getMessage();
+				$this->load->view('back/template_back',$res);
+			}
+			finally{
+				$this->db->close();
+			}
+		}
+		else{
+			$this->load->view('back/template_back',$res);
+		}
    }
+   public function parckingTerminerBack(){
+      $id = $this->input->post('idOccupation');
+      $this->db->set('etat',10);
+      $this->db->where('id', $id);
+      $this->db->update('occupation'); // gives UPDATE occupation SET etat = 10 WHERE id = 2
+  
+      redirect(base_url()."Back/LanyDaty", 'location',301);
+  }
 }

@@ -3,7 +3,9 @@
 
     class GetReservation extends CI_Controller {
         public function index() {
-            $this->load->view('index');
+           $this->load->model('Util');
+           $heure = $this->Util->getDiffenHeure('2020-06-06');
+           echo $heure;
         }
         public function AfficheReservation(){
             $res = array(
