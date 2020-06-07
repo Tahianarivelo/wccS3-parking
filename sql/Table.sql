@@ -48,4 +48,10 @@ CREATE TABLE nalanaAuto(--NLA
 CREATE SEQUENCE seq_nalanaAuto;
 
 ---creation view
+CREATE VIEW occupationDetail as select  occupation.*,
+    axe.nom nomAxe,
+    axe.longueur longaxe,
+    axe.espace,
+    axe.dureemax
+from occupation,axe  where axe.id = occupation.idaxe;
 

@@ -13,13 +13,13 @@
                 'view' => 'reservation');
             if(isset($_COOKIE['token'])){
                 //load
-                $this->load->model('Occupation');
+                $this->load->model('OccupationDetail');
                 $this->load->helper('cookie');
                 $this->load->database();
 
                 $lesReser = null;
                 try{
-                    $lesReser = $this->Occupation->getReservation($_COOKIE['token'],$this->db);
+                    $lesReser = $this->OccupationDetail->getReservation($_COOKIE['token'],$this->db);
                     //si il est vide
                     if(empty($lesReser)){
                         $res['message'] = "vous n'avez pas encore de reservation.";

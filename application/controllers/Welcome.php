@@ -47,8 +47,42 @@ class Welcome extends CI_Controller {
 		}
 	}
 	public function reservation() {
-		$data['view'] = 'reservation';
-		$this->load->view('template',$data);
+		$res = array(
+			'status' => 'error',
+			'message' => '',
+			'value' => null,
+			'view' => 'reservation');
+		if(isset($_COOKIE['token'])){
+			//load
+			$this->load->model('OccupationDetail');
+			$this->load->helper('cookie');
+			$this->load->database();
+
+			$lesReser = null;
+			try{
+				$lesReser = $this->OccupationDetail->getReservation($_COOKIE['token'],$this->db);
+				//si il est vide
+				if(empty($lesReser)){
+					$res['message'] = "vous n'avez pas encore de reservation.";
+				}
+				else{
+					$res['message'] = 'vos reservations récentes.';
+				}
+				$res['status'] = 'OK';
+				$res['value'] = $lesReser;
+				$this->load->view('template',$res);
+			}
+			catch(Exception $e){
+				$res['message'] = $e->getMessage();
+				$this->load->view('template',$res);
+			}
+			finally{
+				$this->db->close();
+			}
+		}
+		else{
+			$this->load->view('template',$res);
+		}
 	}
 	
 }
