@@ -16,8 +16,10 @@
 		<!-- Header -->
 			<header id="header">
 				<h1>Aiza kia no hijanonako</h1>
-				<p><br />
+				<br />
+				<p style="margin-bottom: 0px;">
 				Ampidiro eto ny Halavan'ny fiaranao(metatra)</p>
+				<p>A: 3 fiara eo ho eo, B: 3 fiara eo ho eo, C: 3 fiara eo ho eo</p>
 			</header>
 
 		<!-- Signup Form -->
@@ -26,7 +28,7 @@
 				<input type="submit" value="Mitady" />
 			</form>
 				<?php if(isset($error)) { ?>
-					<p> <?= $error ?> </p>
+					<p style="color:#d21818;"> <?= $error ?> </p>
 				<?php } ?>
 
 		<!-- Footer

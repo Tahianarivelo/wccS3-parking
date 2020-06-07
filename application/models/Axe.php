@@ -40,7 +40,9 @@ class Axe extends CI_Model{
         $result = $this->longueur - ($takenlLength + $this->espace);
         return $result;
     }
+    public function estimationReste($db){
 
+    }
     public static function getFreeAxis($carLength, $db) {
         $carLength = floatval($carLength);
         if($carLength < 2 || $carLength > 15) {
