@@ -5,7 +5,7 @@
 			</header>
 			<div class="flex flex-2">
 				<article>
-                    <form action="<?php echo base_url(); ?>reserver" method="post">
+                    <form action="<?php echo base_url(); ?>Back/AddAxe" method="post">
                         <label style="margin: 0px 0px" >Nom:</label>
                         <input type="text" name="nom" value="" placeholder="Nom de l'axe"><br>
                         <label style="margin: 0px 0px" >Longueur(metre):</label>

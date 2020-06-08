@@ -49,7 +49,7 @@ class Reserver extends CI_Controller
             );
 
             $this->db->insert('occupation', $dataInsert);
-
+            
             redirect(base_url().'welcome/reservation', 'location',301);
         }
     }

@@ -170,4 +170,29 @@ class Back extends CI_Controller
   
       redirect(base_url()."Back/LanyDaty", 'location',301);
   }
+  public function AddAxe(){
+      $res = array(
+         'status' => 'error',
+         'message' => '',
+         'value' => null,
+         'view' => 'dashboard');
+      $this->load->database();
+      try{
+         $nom = $this->input->post('nom');
+         $longueur = $this->input->post('longueur');
+         $espace = $this->input->post('espace');
+         $dureemax = $this->input->post('duree');
+
+         $sql = "INSERT INTO axe VALUES(nextval('seq_axe'),?,?,?,?,0,0)";
+         $this->db->query($sql, array($nom,$longueur,$espace,$dureemax));
+         $data['view'] = 'dashboard';
+         $this->load->view('back/template_back',$data);
+      }catch(Exception $e){
+        
+      }
+      finally
+      {
+         $this->db->close();
+      }
+  }
 }
